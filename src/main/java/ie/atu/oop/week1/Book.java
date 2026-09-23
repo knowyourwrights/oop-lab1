@@ -28,7 +28,7 @@ public class Book {
         }
         else
         {
-            System.out.println(title + " is not available.");
+            System.out.println(title + " is already on loan.");
         }
     }
 }
