@@ -13,6 +13,8 @@ public class Main {
         firstBook.pageCount = 412;
 
         firstBook.displayDetails();
+        firstBook.borrowBook();
+        firstBook.displayDetails();
 
         Book secondBook = new Book();
         secondBook.title = "The life and times of Thunderbolt";
