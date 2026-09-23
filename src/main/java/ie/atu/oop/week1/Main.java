@@ -17,6 +17,7 @@ public class Main {
         firstBook.displayDetails();
 
         /*
+
         Book secondBook = new Book();
         secondBook.title = "The life and times of Thunderbolt";
         secondBook.author = "Frank Black";
@@ -24,6 +25,7 @@ public class Main {
         secondBook.available = true;
 
         secondBook.displayDetails();
+
         */
 
         // creating new books
