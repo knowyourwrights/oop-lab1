@@ -7,9 +7,10 @@ public class Main {
     {
         Book myBook = new Book("Dune", "Frank Herbert", 412);
         myBook.borrowBook();
+        myBook.returnBook();
         try
         {
-            myBook.borrowBook();
+            myBook.returnBook();
         }
         catch (IllegalStateException ex)
         {
