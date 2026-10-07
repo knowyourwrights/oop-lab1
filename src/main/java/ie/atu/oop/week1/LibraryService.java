@@ -39,4 +39,9 @@ public class LibraryService {
         }
         books.add(book);
     }
+
+    public int getBookCount()
+    {
+        return books.size();
+    }
 }
