@@ -3,22 +3,21 @@ package ie.atu.oop.week1;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args)
-    {
-        Book first = new Book("Dune", "Frank Herbert", 412);
-        Book second = new Book("Clean Code", "Robert C. Martin", 464);
+    public static void main(String[] args) {
+        Book dune = new Book(
+                "Dune", "Frank Herbert", 412);
+        Book nineteenEightyFour = new Book(
+                "1984", "George Orwell", 328);
+        Book cleanCode = new Book(
+                "Clean Code", "Robert C. Martin", 464);
         LibraryService service = new LibraryService();
-        System.out.println(first.getStatus());
-        service.loanBook(first, 7);
-        System.out.println(first.getStatus());
-        service.returnBook(first);
-        System.out.println(first.getStatus());
-        System.out.println(second.getStatus());
-        try {
-            service.loanBook(first, 15);
-        } catch (IllegalArgumentException ex) {
-            System.out.println(ex.getMessage());
-        }
-        System.out.println(first.getStatus());
+
+        System.out.println("Remove Clean Code: "
+                + service.removeBook("Clean Code"));
+        System.out.println("Remove again: "
+                + service.removeBook("Clean Code"));
+        System.out.println("Books left: "
+                + service.getBookCount());
+
     }
 }
