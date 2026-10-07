@@ -15,43 +15,31 @@ Verification of successful run
     is borrowed at the beginning and the function to borrow it again is
     called at the very end.
 
+Lab 3: Encapsulation design
+The seven-day call reached Book.borrowBook() because 7 is within the set
+    range (1-14) for taking a book out. 15 is not
 
--------------------------------------------
+The first Book is listed as AVAILABLE before the fifteen-day call because
+    all books are AVAILABLE by default/at the start until they get borrowed.
 
-fdgkvfbv
-This book is Dune
-The author of this book is Frank Herbert
-The page count of this book is 412
-The status of this book is true
+The constructor checks for null first to avoid a nullpointexception error
 
+title, author and pageCount are final because they cannot be altered. Status
+    changes whether or not someone takes a book out.
 
-Dune borrowed successfully.
-This book is Dune
-The author of this book is Frank Herbert
-The page count of this book is 412
-The status of this book is false
+borrowBook and returnBook are used so that errors can be thrown if someone
+    tries to take a book out or return it when someone else has already
+    done so.
 
+LibraryService relates to taking/returning books (and for how long they can
+    be taken out for), while Book relates to the books themselves (title,
+    author, pageCount...)
 
-
-
-This book is The life and times of Thunderbolt
-The author of this book is Frank Black
-The page count of this book is 12
-The status of this book is true
-
-
-This book is Another Book Code
-The author of this book is John Murphy
-The page count of this book is 333
-The status of this book is true
-
-
-This book is Student Life
-The author of this book is Mary Shelley
-The page count of this book is 442
-The status of this book is true
-
-
-Dune is already on loan.
+Successful loan:
+    N/A. Does not print anything. Only changes the status of the book
+Rejected loan:
+Loan days must be from 1 to 14
+Rejected return:
+    Book must not be null
 
 -------------------------------------------
