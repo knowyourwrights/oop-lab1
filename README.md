@@ -15,43 +15,8 @@ Verification of successful run
     is borrowed at the beginning and the function to borrow it again is
     called at the very end.
 
+Lab 3: KJFFBV STUFF HERE
 
--------------------------------------------
-
-fdgkvfbv
-This book is Dune
-The author of this book is Frank Herbert
-The page count of this book is 412
-The status of this book is true
-
-
-Dune borrowed successfully.
-This book is Dune
-The author of this book is Frank Herbert
-The page count of this book is 412
-The status of this book is false
-
-
-
-
-This book is The life and times of Thunderbolt
-The author of this book is Frank Black
-The page count of this book is 12
-The status of this book is true
-
-
-This book is Another Book Code
-The author of this book is John Murphy
-The page count of this book is 333
-The status of this book is true
-
-
-This book is Student Life
-The author of this book is Mary Shelley
-The page count of this book is 442
-The status of this book is true
-
-
-Dune is already on loan.
+Lab 4: 
 
 -------------------------------------------
