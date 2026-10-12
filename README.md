@@ -77,4 +77,7 @@ Build success:
 Process finished with exit code 0
 
 
+No AI was used in the making of this program
+
+
 -------------------------------------------
