@@ -17,6 +17,23 @@ Verification of successful run
 
 Lab 3: KJFFBV STUFF HERE
 
-Lab 4: 
+Lab 4:
+Lab 4 changes LibraryService from working with a single supplied Book
+    to owning a List<Book>
+
+
+
+Build success:
+[INFO] --- jar:3.4.1:jar (default-jar) @ book-Tracker ---
+[INFO] Building jar: C:\Users\JESSEPRIETOSOLOVYOVA\IdeaProjects\oop-lab1\target\book-Tracker-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.052 s
+[INFO] Finished at: 2026-10-12T10:22:24+01:00
+[INFO] ------------------------------------------------------------------------
+
+Process finished with exit code 0
+
 
 -------------------------------------------

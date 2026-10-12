@@ -7,29 +7,26 @@ public class LibraryService {
     private static final int MAX_LOAN_DAYS = 14;
     private final List<Book> books = new ArrayList<>();
 
-    public void loanBook(Book book, int loanDays)
-    {
-        if (book == null)
-        {
-            throw new IllegalArgumentException("Book must not be null");
+    public boolean loanBook(String title, int loanDays) {
+        if (loanDays < 1 || loanDays > MAX_LOAN_DAYS) {
+            throw new IllegalArgumentException(
+                    "Loan days must be from 1 to 14");
         }
-        if (loanDays < 1 || loanDays > MAX_LOAN_DAYS)
-        {
-            throw new IllegalArgumentException("Loan days must be from 1 to 14");
+        Book book = findBookByTitle(title);
+        if (book == null) {
+            return false;
         }
         book.borrowBook();
+        return true;
     }
 
-    public void returnBook(Book book)
-    {
-        if (book == null)
-        {
-            throw new IllegalArgumentException("Book must not be null");
+    public boolean returnBook(String title) {
+        Book book = findBookByTitle(title);
+        if (book == null) {
+            return false;
         }
-        else
-        {
-            book.returnBook();
-        }
+        book.returnBook();
+        return true;
     }
 
     public void addBook(Book book)
@@ -54,11 +51,12 @@ public class LibraryService {
     {
         for (Book book : books)
         {
-            if (book.getTitle().equalsIgnoreCase(title))
+            if (book.getTitle().equals(title))
             {
                 return book;
             }
         }
+
 
         return null;
     }
