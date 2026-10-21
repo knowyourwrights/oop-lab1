@@ -10,6 +10,8 @@ public class Main {
                 "1984", "George Orwell", 328);
         Book cleanCode = new Book(
                 "Clean Code", "Robert C. Martin", 464);
+        Book first = new Book("Dune", "Frank Herbert", 412);
+        Book second = new Book("Clean Code", "Robert C. Martin", 464);
         LibraryService service = new LibraryService();
         service.addBook(dune);
         service.addBook(nineteenEightyFour);
