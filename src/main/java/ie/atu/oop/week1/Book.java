@@ -1,34 +1,66 @@
 package ie.atu.oop.week1;
 
-public class Book {
-    public String title;
-    public String author;
-    public int pageCount;
-    public boolean available = true;
+public class Book
+{
+    private String title;
+    private String author;
+    private int pageCount;
+    private BookStatus status;
 
-    public Book()
+    public Book(String title, String author, int pageCount)
     {
+        if (title == null || title.isBlank())
+        {
+            throw new IllegalArgumentException("Title cannot be null or blank");
+        }
+
+        if (author == null || author.isBlank())
+        {
+            throw new IllegalArgumentException("Author cannot be null or blank");
+        }
+
+        if  (pageCount < 1)
+        {
+            throw new IllegalArgumentException("Page count cannot be less than 1");
+        }
+        this.title = title.trim();
+        this.author = author.trim();
+        this.pageCount = pageCount;
+        this.status = BookStatus.AVAILABLE;
     }
 
-    public void displayDetails()
+    //getters
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getPageCount() {
+        return pageCount;
+    }
+
+    public BookStatus getStatus()
     {
-        System.out.println("This book is " + title);
-        System.out.println("The author of this book is " + author);
-        System.out.println("The page count of this book is " + pageCount);
-        System.out.println("The status of this book is " + available);
-        System.out.println("\n");
+        return status;
     }
 
     public void borrowBook()
     {
-        if (available)
+        if (status == BookStatus.ON_LOAN)
         {
-            available = false;
-            System.out.println(title + " borrowed successfully.");
+            throw new IllegalStateException("Book is already on loan");
         }
-        else
+        status = BookStatus.ON_LOAN;
+    }
+    public void returnBook()
+    {
+        if  (status == BookStatus.AVAILABLE)
         {
-            System.out.println(title + " is already on loan.");
+            throw new IllegalStateException("Book is already available");
         }
+        status = BookStatus.AVAILABLE;
     }
 }
