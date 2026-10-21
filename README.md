@@ -79,5 +79,34 @@ Process finished with exit code 0
 
 No AI was used in the making of this program
 
-
+Lab 5:
 -------------------------------------------
+Lab 5 adds exception handling and CSV persistence (states being remembered even after reset)
+    to the library application.
+
+throw will return an exception which halts the program. catch
+    decides what to do if a particular exception is returned, e.g.
+    printing something. The program handles exceptions during catch whereas
+    throw just puts them out.
+
+Path.of(...) shows which files/folders lead to the file you're looking for
+    (which is often in the brackets). One Path method: "Path.of("data", "books.csv"));"
+    and one Files method: "Files.exists(file)". The former checks the path of books.csv
+    and the latter checks if the file itself exists.
+
+IOException is a general error while NumberFormatException is an exception
+    specifically for when a certain type of number is expected & not given.
+
+Path handles the direction the program goes in to get the files, while Files
+    concerns the files themselves rather than how to get to them
+
+
+CSV contents:
+
+"title,author,pageCount,status
+
+Dune,Frank Herbert,412,ON_LOAN
+
+Clean Code,Robert C. Martin,464,AVAILABLE"
+
+No AI assistance or materials were used in the making of this lab.

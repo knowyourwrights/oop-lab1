@@ -73,4 +73,12 @@ public class LibraryService {
             return true;
         }
     }
+
+    public List<Book> getBooks()
+    {
+        return new ArrayList<>(books); //Returning books directly would give another class a
+                                    // reference to LibraryService's internal collection. Returning a new ArrayList
+                                // gives the caller the same Book references but prevents it from adding/removing
+                            // elements from the service's own List by accident.
+    }
 }

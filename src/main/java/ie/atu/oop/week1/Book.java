@@ -11,7 +11,8 @@ public class Book
     {
         if (title == null || title.isBlank())
         {
-            throw new IllegalArgumentException("Title cannot be null or blank");
+            throw new IllegalArgumentException("Title cannot be null or blank"); // prints when title is blank. see
+                                                                                 //BookExceptionCheck
         }
 
         if (author == null || author.isBlank())
